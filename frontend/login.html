@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login & Sign Up - NyayBharat</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+<div class="form-box">
+<h1 id="formTitle">Login</h1>
+<!-- Login Form -->
+<form id="loginForm">
+<div class="input-group">
+<input type="email" id="loginEmail" placeholder="Email" required />
+</div>
+<div class="input-group">
+<input type="password" id="loginPassword" placeholder="Password" required />
+</div>
+<button type="submit" class="btn">Login</button>
+<!-- Google Login -->
+<div class="divider">
+<span>or</span>
+</div>
+<button type="button" class="google-btn" id="googleLogin">
+<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo">
+Continue with Google
+</button>
+<button type="button" class="otp-btn" id="otpLoginBtn">
+Login with OTP
+</button>
+<p class="switch">
+<a href="#" id="forgotPassword">Forgot Password?</a>
+</p>
+<p class="switch">
+Don't have an account?
+<a href="#" id="switchToSignup">Sign Up</a>
+</p>
+</form>
+      
+<!-- OTP Login Form -->
+<form id="otpLoginForm" class="hidden">
+<div class="input-group">
+<input type="email" id="otpEmail" placeholder="Email" required />
+</div>
+<button type="button" class="btn" id="sendOtpBtn">Send OTP</button>
+<div class="input-group hidden" id="otpInputGroup">
+<input type="text" id="otpCode" placeholder="Enter 6-digit OTP" maxlength="6" pattern="[0-9]{6}" required />
+</div>
+<button type="submit" class="btn hidden" id="verifyOtpBtn">Verify OTP</button>
+<p class="switch">
+<a href="#" id="backToLogin">Back to Login</a>
+</p>
+</form>
+      
+<!-- Forgot Password Form -->
+<form id="forgotPasswordForm" class="hidden">
+<div class="input-group">
+<input type="email" id="resetEmail" placeholder="Email" required />
+</div>
+<button type="button" class="btn" id="sendResetOtpBtn">Send Reset OTP</button>
+<div class="input-group hidden" id="resetOtpGroup">
+<input type="text" id="resetOtpCode" placeholder="Enter 6-digit OTP" maxlength="6" pattern="[0-9]{6}" required />
+</div>
+<div class="input-group hidden" id="newPasswordGroup">
+<input type="password" id="newPassword" placeholder="New Password" minlength="6" required />
+</div>
+<button type="submit" class="btn hidden" id="resetPasswordBtn">Reset Password</button>
+<p class="switch">
+<a href="#" id="backToLoginFromReset">Back to Login</a>
+</p>
+</form>
+      
+<!-- Signup Form -->
+<form id="signupForm" class="hidden">
+<div class="input-group">
+<input type="text" id="signupName" placeholder="Full Name" required />
+</div>
+<div class="input-group">
+<input type="email" id="signupEmail" placeholder="Email" required />
+</div>
+<div class="input-group">
+<input type="tel" id="signupPhone" placeholder="Mobile Number" pattern="[0-9]{10}" required />
+</div>
+<div class="input-group">
+<input type="password" id="signupPassword" placeholder="Password" required />
+</div>
+<button type="submit" class="btn">Sign Up</button>
+<div class="divider">
+<span>or</span>
+</div>
+<button type="button" class="google-btn" id="googleSignup">
+<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo">
+Sign Up with Google
+</button>
+<p class="switch">
+Already have an account?
+<a href="#" id="switchToLogin">Login</a>
+</p>
+</form>
+</div>
+</div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
